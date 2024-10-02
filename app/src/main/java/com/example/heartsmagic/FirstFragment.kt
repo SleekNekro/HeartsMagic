@@ -42,6 +42,9 @@ class FirstFragment : Fragment() {
         }
         binding.minusHeart1.setOnClickListener{
             life1--
+            if (life1<0){
+                life1=0
+            }
             actuaizarP1()
         }
         //Poison
@@ -57,6 +60,9 @@ class FirstFragment : Fragment() {
         binding.lifeP1toP2.setOnClickListener {
             life1--
             life2++
+            if (life1<0){
+                life1=0
+            }
             actuaizarP1()
             actualizarP2()
         }
@@ -67,7 +73,10 @@ class FirstFragment : Fragment() {
             actualizarP2()
         }
         binding.minusHeart2.setOnClickListener {
-            life1--
+            life2--
+            if (life2<0){
+                life2=0
+            }
             actualizarP2()
         }
         //Poison
@@ -83,6 +92,9 @@ class FirstFragment : Fragment() {
         binding.lifeP2toP1.setOnClickListener {
             life2--
             life1++
+            if (life2<0){
+                life2=0
+            }
             actuaizarP1()
             actualizarP2()
         }
